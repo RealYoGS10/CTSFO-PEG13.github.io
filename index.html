@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTSFO | PEG-13 Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0b0e11;
+            color: #d1d1d1;
+            font-family: 'Roboto Mono', monospace;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Tactical Background Overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 25, 33, 0.9), rgba(0, 0, 0, 0.9)),
+                        repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 2px);
+            z-index: -1;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background: rgba(30, 39, 46, 0.8);
+            border: 2px solid #4a4e52;
+            border-top: 5px solid #2f3542;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            position: relative;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 1px solid #4a4e52;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 5px;
+            color: #ffffff;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .callsign {
+            color: #ff4757;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .id-card {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            border: 1px solid #57606f;
+            box-shadow: 0 0 15px rgba(0, 210, 211, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .id-card:hover {
+            transform: scale(1.02);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            width: 100%;
+        }
+
+        .stat-box {
+            background: rgba(0,0,0,0.3);
+            padding: 10px;
+            border-left: 3px solid #00d2d3;
+        }
+
+        .stat-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: #747d8c;
+        }
+
+        .stat-value {
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #2f3542;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border: 1px solid #00d2d3;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: #00d2d3;
+            color: #000;
+            box-shadow: 0 0 15px #00d2d3;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.6rem;
+            color: #57606f;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>CTSFO UNIT</h1>
+            <p class="callsign">OPERATIVE: PEG-13</p>
+        </div>
+
+        <div class="profile-section">
+            <img src="id-card.jpg" alt="CTSFO ID CARD" class="id-card">
+
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="stat-label">Status</div>
+                    <div class="stat-value" style="color: #2ed573;">ACTIVE</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Department</div>
+                    <div class="stat-value">MET POLICE</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Jurisdiction</div>
+                    <div class="stat-value">ER:LC COUNTY</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Specialization</div>
+                    <div class="stat-value">TACTICAL ARMS</div>
+                </div>
+            </div>
+
+            <a href="https://www.youtube.com/@RealYoGS10-YT" target="_blank" class="btn">ACCESS YOUTUBE DATABASE</a>
+        </div>
+
+        <div class="footer">
+            Property of Metropolitan Police Service - Authorized Personnel Only
+        </div>
+    </div>
+
+</body>
+</html>
